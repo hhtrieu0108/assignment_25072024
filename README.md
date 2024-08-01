@@ -85,3 +85,5 @@
 - With the not really large dataset or small repartition. GroupByKey and ReduceByKey not really different. But the most of time. GroupByKey faster
 - With the large dataset and a lot of partition (I test with partition >= 12). ReduceByKey is faster than GroupByKey.
 - I tested with increase number of keys and decrease it. So that affect the performance too.
+- GroupByKey combine all value of a key into a list => More spaces in storage and not really good at big data
+- ReduceByKey aggregate at the each key (go to each partition to do it) => Less storage and good with big data
