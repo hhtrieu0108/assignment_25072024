@@ -7,7 +7,7 @@ import time
 conf = SparkConf().set("spark.executor.cores","2")\
                 .set("spark.executor.memory","2g")
 
-sc = SparkContext(appName="Test",conf=conf)
+sc = SparkContext(appName="Spark Repartition Testing",conf=conf)
 
 from math import sqrt,ceil
 def is_prime(n):
