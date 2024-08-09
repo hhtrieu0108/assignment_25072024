@@ -11,7 +11,7 @@ print(n_workers)
 
 sc = spark._jsc.sc() 
 
-result1 = sc.getExecutorMemoryStatus().keys() # will print all the executors + driver available
+result1 = sc.getExecutorMemoryStatus().keys()
 
 result2 = len([executor.host() for executor in sc.statusTracker().getExecutorInfos() ]) -1
 
