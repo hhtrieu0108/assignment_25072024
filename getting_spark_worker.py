@@ -1,7 +1,10 @@
+import findspark
+findspark.init()
+
 from pyspark.sql import SparkSession
 from pyspark import SparkConf
-conf = SparkConf().set("spark.driver.host", "10.88.51.141").set("spark.driver.port","7077")
-
+# conf = SparkConf().set("spark.driver.host", "10.88.51.141").set("spark.driver.port","7077")
+conf = SparkConf()
 spark = SparkSession.builder.appName("Test").config(conf=conf).getOrCreate()
 
 sc = spark._jsc.sc() 
